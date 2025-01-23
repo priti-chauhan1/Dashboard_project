@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Charts</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>Data Visualization Dashboard</h1>
+
+    <div class="filters">
+      <div class="filter-item">
+        <label for="dataset">Enter Dataset (A-F):</label>
+        <input type="text" id="dataset" placeholder="e.g., A" />
+      </div>
+      <div class="filter-item">
+        <label for="age">Select Age:</label>
+        <select id="age">
+          <option value="all">All</option>
+          <option value="15-25">15-25</option>
+          <option value=">25">>25</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="gender">Select Gender:</label>
+        <select id="gender">
+          <option value="all">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" />
+      </div>
+      <div class="filter-item">
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" />
+      </div>
+      <button id="apply-filters">Apply Filters</button>
+    </div>
+    <div class="dashboard-container">
+      <div class="dashboard">
+        <h2>Column Chart</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="dashboard">
+        <h2>Line Chart</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
